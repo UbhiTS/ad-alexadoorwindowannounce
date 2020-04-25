@@ -40,9 +40,9 @@ alexa_door_window_announce:
 
 key | optional | type | default | description
 -- | -- | -- | -- | --
-`module` | **False** | string | alexa_doorbell | The module name of the app.
-`class` | **False** | string | AlexaDoorbell | The name of the Class.
-`alexas` | **False** | list | # alexa_media_players # | The Alexa device(s) to target for the door/window announcements.
+`module` | **False** | string | alexa_door_window_announce | The module name of the app.
+`class` | **False** | string | AlexaDoorWindowAnnounce | The name of the Class.
+`alexas` | **False** | list |  | The Alexa device(s) to target for the door/window announcements.
 `door_windows` | **False** | cover\|binary_sensor |  | The doors/windows to monitor.
 `announcements\|start_time` | True | time | 00:00:00 | The time to enable the service. (24h format)
 `announcements\|end_time` | True | time | 23:59:59 | The time to disable the service. (24h format)
