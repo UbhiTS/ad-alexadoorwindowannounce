@@ -6,7 +6,7 @@
      style="height:41px !important; width:174px !important;" />
 </a>
 
-Alexa announces your doors/windows opening and closing. Comes in handy for garage doors or side/main exits for houses and shops where you need to stay informed if any doors or windows open or close.
+Alexa announces your doors/windows opening and closing. Comes in handy for garage doors or side/main exits for houses and shops where you need to stay informed of the doors/windows state when it changes.
 
 Please ⭐ this repo if you like my work and also check out my other repos like
 - [Home Assistant 'STEROIDS' Configuration](https://github.com/UbhiTS/ha-config-ataraxis)
