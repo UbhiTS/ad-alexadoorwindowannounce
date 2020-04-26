@@ -1,4 +1,5 @@
 import appdaemon.plugins.hass.hassapi as hass
+import datetime
 
 #
 # Alexa Door Window Announce App
@@ -26,12 +27,12 @@ class AlexaDoorWindowAnnounce(hass.Hass):
       for door_window_sensor in self.args["doors_windows"]:
         self.listen_state(self.door_window_state_changed, door_window_sensor, attribute = "state")
 
-    self.time_start = datetime.strptime("00:00:00", '%H:%M:%S').time()
-    self.time_end = datetime.strptime("23:59:59", '%H:%M:%S').time()
+    self.time_start = datetime.datetime.strptime("00:00:00", '%H:%M:%S').time()
+    self.time_end = datetime.datetime.strptime("23:59:59", '%H:%M:%S').time()
 
     if "announcements" in self.args:
-      self.time_start = datetime.strptime(self.args["announcements"]["start_time"], '%H:%M:%S').time() if "start_time" in self.args["announcements"] else self.time_start
-      self.time_end = datetime.strptime(self.args["announcements"]["end_time"], '%H:%M:%S').time() if "end_time" in self.args["announcements"] else self.time_end
+      self.time_start = datetime.datetime.strptime(self.args["announcements"]["start_time"], '%H:%M:%S').time() if "start_time" in self.args["announcements"] else self.time_start
+      self.time_end = datetime.datetime.strptime(self.args["announcements"]["end_time"], '%H:%M:%S').time() if "end_time" in self.args["announcements"] else self.time_end
 
     self.log(f"INITIALIZED : From {self.time_start}, To {self.time_end}")
 
