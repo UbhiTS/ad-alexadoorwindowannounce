@@ -48,7 +48,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
     if new in ["open", "on"]: state = "opened"
     if new in ["closed", "off"]: state = "closed"
     
-    if datetime.now().time() < self.time_start or self.time_end < datetime.now().time():
+    if datetime.datetime.now().time() < self.time_start or self.time_end < datetime.datetime.now().time():
       self.log(f"DOOR/WINDOW TIME LOG ONLY: {sensor_name.split('.')[1]}|{state}")
       return
     
