@@ -1,10 +1,6 @@
 # Alexa (& Sonos) Door/Window Announce : AppDaemon (HASS) :chicken:
 
-<a href="https://www.buymeacoffee.com/ubhits" target="_blank">
-<img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
-     alt="Buy Me A Beer" 
-     style="height:41px !important; width:174px !important;" />
-</a>
+[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
 Alexa announces your doors/windows opening and closing. Comes in handy for garage doors or side/main exits for houses and shops where you need to stay informed of the doors/windows state when it changes.
 
