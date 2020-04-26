@@ -6,8 +6,10 @@ Alexa announces your doors/windows opening and closing. Comes in handy for garag
 
 Please ⭐ this repo if you like my work and also check out my other repos like
 - [Home Assistant 'STEROIDS' Configuration](https://github.com/UbhiTS/ha-config-ataraxis)
-- [Alexa Talking Clock](https://github.com/UbhiTS/ad-alexatalkingclock)
-- [Alexa Doorbell](https://github.com/UbhiTS/ad-alexadoorbell)
+- [Alexa (& Sonos) Talking Clock](https://github.com/UbhiTS/ad-alexatalkingclock)
+- [Alexa (& Sonos) Doorbell](https://github.com/UbhiTS/ad-alexadoorbell)
+- [Alexa (& Sonos) Door/Window Announce](https://github.com/UbhiTS/ad-alexadoorwindowannounce)
+- [Alexa (& Sonos) Smart Talking Thermostat](https://github.com/UbhiTS/ad-alexasmarttalkingthermostat)
 
 Also, if you want to see a walkthrough of my Home Assistant configuration, I have my video walkthrough on youtube below
 - [Home Automation on 'STEROIDS' : Video Walkthrough](https://youtu.be/qqktLE9_45A)
