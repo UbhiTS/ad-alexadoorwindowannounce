@@ -34,6 +34,7 @@ alexa_door_window_announce:
     - cover.garage_door_big
     - cover.garage_door_small
     - binary_sensor.main_door
+    - binary_sensor.side_door
   announcements:
     start_time: "00:00:00"
     end_time: "23:59:59"
