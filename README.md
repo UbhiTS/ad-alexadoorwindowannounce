@@ -1,4 +1,4 @@
-# Alexa (& Friends) Door/Window Announce : AppDaemon (HASS) :chicken:
+# Alexa (& Friends) Door/Window Announce : AppDaemon HASS :chicken:
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
