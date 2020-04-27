@@ -18,7 +18,7 @@ Also, if you want to see a walkthrough of my Home Assistant configuration, I hav
 - [Home Automation on 'STEROIDS' : Video Walkthrough](https://youtu.be/qqktLE9_45A)
 
 ## Installation
-NEEDS THE **[Alexa Media Player](https://github.com/custom-components/alexa_media_player)** or other TTS Integration
+**Needs the [Alexa Media Player](https://github.com/custom-components/alexa_media_player) or other TTS integration**
 
 Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/UbhiTS/ad-alexadoorwindowannounce) the `alexa_door_window_announce.py` from inside the `apps` directory to your local `apps` directory, and add the following configuration to enable the app.
 
@@ -51,6 +51,8 @@ key | optional | type | default | description
 
 ## Thank you!
 This app wouldn't be possible without the amazing work done by the developers and community at **[Home Assistant](https://www.home-assistant.io/)**
+
+A very special thanks to **Keaton Taylor** and **Alan Tse** whose work on **[Alexa Media Player](https://github.com/custom-components/alexa_media_player)** was the basis of my inspiration and my work to code all the above listed apps!
 
 If you like my work and feel gracious, you can buy me a beer below ;)
 
