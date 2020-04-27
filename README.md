@@ -44,7 +44,7 @@ key | optional | type | default | description
 `module` | **False** | string |  | The module name of the app.
 `class` | **False** | string |  | The name of the Class.
 `alexas` | **False** | list |  | The Alexa device(s) to target for the door/window announcements.
-`door_windows` | **False** | cover,binary_sensor |  | The doors/windows to monitor.
+`door_windows` | **False** | cover, binary_sensor |  | The doors/windows to monitor.
 `announcements\|start_time` | True | time | 00:00:00 | The time to enable the service. (24h format)
 `announcements\|end_time` | True | time | 23:59:59 | The time to disable the service. (24h format)
 
