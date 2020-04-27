@@ -2,7 +2,9 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
-Alexa announces your doors/windows opening and closing. Comes in handy for garage doors or side/main exits for houses and shops where you need to stay informed of the doors/windows state when it changes.
+Alexa announces your doors/windows opening and closing. Comes in handy specially for garage doors or side/main exits for homes and shops where you need to stay informed of any changes. Trust me, it's a secured feeling to know the status of your garage, main/side exits. 
+
+Ever since we've set this up in our home, we don't think we can do without it now. Your home suddenly gets a voice, something like Jarvis ... Awesome! 
 
 Please ⭐ this repo if you like my work and also check out my other repos like
 - [Home Assistant 'STEROIDS' Configuration](https://github.com/UbhiTS/ha-config-ataraxis)
@@ -18,7 +20,7 @@ Also, if you want to see a walkthrough of my Home Assistant configuration, I hav
 ## Installation
 **NEEDS THE [Alexa Media Player](https://github.com/custom-components/alexa_media_player) HACS Integration from Keaton Taylor and Alan Tse**
 
-Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/UbhiTS/ad-alexatalkingclock) the `alexa_doorbell` directory from inside the `apps` directory to your local `apps` directory, then add the configuration to enable the `alexa_doorbell` module.
+Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/UbhiTS/ad-alexadoorwindowannounce) the `alexa_door_window_announce.py` from inside the `apps` directory to your local `apps` directory, and add the following configuration to enable the app.
 
 ## App Configuration (config/appdaemon/apps/apps.yaml)
 ```yaml
@@ -47,9 +49,7 @@ key | optional | type | default | description
 `announcements\|end_time` | True | time | 23:59:59 | The time to disable the service. (24h format)
 
 ## Thank you!
-This app wouldn't be possible without the amazing work done by the developers and community at **[Home Assistant](https://www.home-assistant.io/)**, and of Keaton Taylor and Alan Tse on their **Alexa Media Player integration** for Home Assistant. *https://github.com/custom-components/alexa_media_player*
-
-It's a secured feeling to know the status of your garage or main/side exits. Ever since we've set this up in our home, now we don't think we can do without it. Your home suddenly gets a voice, something like Jarvis ... awesome ! 
+This app wouldn't be possible without the amazing work done by the developers and community at **[Home Assistant](https://www.home-assistant.io/)**
 
 If you like my work and feel gracious, you can buy me a beer below ;)
 
