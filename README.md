@@ -36,6 +36,8 @@ alexa_door_window_announce:
     - binary_sensor.main_door
     - binary_sensor.side_door
   announcements:
+    delay: "00:00:00"
+    close: True
     start_time: "00:00:00"
     end_time: "23:59:59"
 ```
@@ -46,6 +48,8 @@ key | optional | type | default | description
 `class` | **False** | string |  | The name of the Class.
 `alexas` | **False** | list |  | Your smart speaker device(s) to target for the door/window announcements.
 `door_windows` | **False** | cover, binary_sensor |  | The doors/windows to monitor.
+`announcements\|delay` | True | time | 00:00:00 | The time duration to wait before announcing a door open (24h format). Useful to notify if a door has been open for a long time.
+`announcements\|close` | True | bool | True | Announce the closing of the door after the opening announcement.
 `announcements\|start_time` | True | time | 00:00:00 | The time to enable the service. (24h format)
 `announcements\|end_time` | True | time | 23:59:59 | The time to disable the service. (24h format)
 
