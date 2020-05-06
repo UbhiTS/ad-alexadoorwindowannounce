@@ -2,6 +2,8 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
+## New in v1.0.6: Door/Window Open Delay, and Close Announcement Control
+
 Alexa and other smart speakers (media_player) announce your doors/windows opening and closing. Comes in handy specially for garage doors or side/main exits for homes and shops where you need to stay informed of any changes. Trust me, it's a secured feeling to know the status of your garage, main/side exits. 
 
 Ever since we've set this up in our home, we don't think we can do without it now. Your home suddenly gets a voice, something like Jarvis ... Awesome! 
@@ -18,7 +20,7 @@ Also, if you want to see a walkthrough of my Home Assistant configuration, I hav
 - [Home Automation on 'STEROIDS' : Video Walkthrough](https://youtu.be/qqktLE9_45A)
 
 ## Installation
-**Needs the [Alexa Media Player](https://github.com/custom-components/alexa_media_player) or other TTS integration**
+**Needs the [Alexa Media Player](https://github.com/custom-components/alexa_media_player) or Google Home, Sonos or other smart speaker integration**
 
 Use [HACS](https://github.com/custom-components/hacs) or [download](https://github.com/UbhiTS/ad-alexadoorwindowannounce) the `alexa_door_window_announce.py` from inside the `apps` directory to your local `apps` directory, and add the following configuration to enable the app.
 
