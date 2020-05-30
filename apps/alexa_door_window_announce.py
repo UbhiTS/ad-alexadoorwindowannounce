@@ -48,14 +48,14 @@ class AlexaDoorWindowAnnounce(hass.Hass):
         else:
           self.log("UNSUPPORTED DOMAIN: " + door_window_sensor)
         
-    init_log = [f"START {self.time_start}, END {self.time_end}"]
+    init_log = [f"  START {self.time_start}\n  END   {self.time_end}"]
 
     if self.delay.total_seconds() > 0:
-      init_log += [f"DELAY:{int(self.delay.total_seconds())}"]
+      init_log += [f"\n  DELAY {int(self.delay.total_seconds())}"]
     if self.announce_close:
-      init_log += [f"CLOSE"]
+      init_log += [f"\n  CLOSE"]
     
-    self.log("INIT " + ", ".join(init_log))
+    self.log("\nINIT - ALEXA DOOR WINDOW ANNOUNCE\n" + "".join(init_log))
 
 
   def door_window_state_changed(self, entity, attribute, old, new, kwargs):
@@ -70,7 +70,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
     if new == states[2]: state = "closed"
     if new == states[4]: state = "opened"
     
-    if datetime.now().time() < self.time_start or self.time_end < datetime.now().time():
+    if not self.is_time_okay(self.time_start, self.time_end):
       self.log(f"DOOR/WINDOW TIME LOG ONLY: {entity.split('.')[1]}|{state}")
       return
     
@@ -104,3 +104,11 @@ class AlexaDoorWindowAnnounce(hass.Hass):
       return [ "sensor", "on", "off", "off", "on" ]
     else:
       return [ "other" ]
+
+
+  def is_time_okay(self, start, end):
+    current_time = datetime.now().time()
+    if (start < end):
+      return start <= current_time and current_time <= end
+    else:
+      return start <= current_time or current_time <= end
