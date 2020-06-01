@@ -21,12 +21,13 @@ from datetime import datetime, time, timedelta
 #    close: True
 #    start_time: "00:00:00"
 #    end_time: "23:59:59"
-
+#  debug: false
 
 class AlexaDoorWindowAnnounce(hass.Hass):
 
   def initialize(self):
 
+    self.debug = True;
     self.delay = timedelta() # default 0
     self.announce_close = True
     self.time_start = datetime.strptime("00:00:00", '%H:%M:%S').time()
@@ -46,7 +47,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
         if states[0] in ["cover", "sensor"]:
           self.listen_state(self.door_window_state_changed, door_window_sensor, old = states[3], new = states[4], duration = self.delay.total_seconds())
         else:
-          self.log("UNSUPPORTED DOMAIN: " + door_window_sensor)
+          self.debug_log("UNSUPPORTED DOMAIN: " + door_window_sensor)
         
     init_log = [f"  START {self.time_start}\n  END   {self.time_end}"]
 
@@ -55,7 +56,9 @@ class AlexaDoorWindowAnnounce(hass.Hass):
     if self.announce_close:
       init_log += [f"\n  CLOSE"]
     
-    self.log("\nINIT - ALEXA DOOR WINDOW ANNOUNCE\n" + "".join(init_log))
+    self.debug_log("\n**** INIT - ALEXA DOOR WINDOW ANNOUNCE ****\n" + "".join(init_log))
+    
+    self.debug = bool(self.args["debug"]) if "debug" in self.args else self.debug
 
 
   def door_window_state_changed(self, entity, attribute, old, new, kwargs):
@@ -71,7 +74,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
     if new == states[4]: state = "opened"
     
     if not self.is_time_okay(self.time_start, self.time_end):
-      self.log(f"DOOR/WINDOW TIME LOG ONLY: {entity.split('.')[1]}|{state}")
+      self.debug_log(f"DOOR/WINDOW TIME LOG ONLY: {entity.split('.')[1]}|{state}")
       return
     
     delay = 0
@@ -91,7 +94,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
     try:
       self.call_service("notify/alexa_media", data = {"type":"tts", "method":"all"}, target = alexa, title = "Home Assistant: Door/Window Announce", message = f"Your attention please. The {friendly_name} has been {state}.")
     finally:
-      self.log(f"DOOR/WINDOW ANNOUNCE: {sensor_name.split('.')[1]}|{state}|{alexa.split('.')[1]}")
+      self.debug_log(f"DOOR/WINDOW ANNOUNCE: {sensor_name.split('.')[1]}|{state}|{alexa.split('.')[1]}")
 
 
   def get_state_values(self, entity):
@@ -112,3 +115,7 @@ class AlexaDoorWindowAnnounce(hass.Hass):
       return start <= current_time and current_time <= end
     else:
       return start <= current_time or current_time <= end
+      
+  def debug_log(self, message):
+    if self.debug:
+      self.log(message)
