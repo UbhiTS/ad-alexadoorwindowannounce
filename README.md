@@ -2,11 +2,14 @@
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs)
 
-## New in v1.0.6: Door/Window Open Delay, and Close Announcement Control
+## New in v1.1.1:
+- Ability to override the announcement prefix spoken by Alexa.
 
-Alexa and other smart speakers (media_player) announce your doors/windows opening and closing. Comes in handy specially for garage doors or side/main exits for homes and shops where you need to stay informed of any changes. Trust me, it's a secured feeling to know the status of your garage, main/side exits. 
+## Overview
 
-Ever since we've set this up in our home, we don't think we can do without it now. Your home suddenly gets a voice, something like Jarvis ... Awesome! 
+Alexa and other smart speakers (media_player) announce your doors/windows opening and closing. Comes in handy specially for garage doors or side/main exits for homes and shops where you need to stay informed of any changes. Trust me, it's a secured feeling to know the status of your garage, main/side exits.
+
+Ever since we've set this up in our home, we don't think we can do without it now. Your home suddenly gets a voice, something like Jarvis ... Awesome!
 
 Please ⭐ this repo if you like my work and also check out my other repos like
 - [Home Assistant 'STEROIDS' Configuration](https://github.com/UbhiTS/ha-config-ataraxis)
@@ -42,6 +45,7 @@ alexa_door_window_announce:
     close: True
     start_time: "00:00:00"
     end_time: "23:59:59"
+    announcement_prefix: "Attention "
   debug: false
 ```
 
@@ -55,6 +59,7 @@ key | optional | type | default | description
 `announcements\|close` | True | bool | True | Announce the closing of the door. Set to False if you just want opening announcements.
 `announcements\|start_time` | True | time | 00:00:00 | The time to enable the service. (24h format)
 `announcements\|end_time` | True | time | 23:59:59 | The time to disable the service. (24h format)
+`announcements\|announcement_prefix` | True | string | Your attention please. The | The initial phrase spoken by Alexa during alerts
 `debug` | True | bool | False | if True, outputs messages to the AppDaemon Log
 
 ## Thank you! :raised_hands:
@@ -66,7 +71,7 @@ If you like my work and feel gracious, you can buy me a beer below ;)
 
 <a href="https://www.buymeacoffee.com/ubhits" target="_blank">
 <img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png"
-     alt="Buy Me A Beer" 
+     alt="Buy Me A Beer"
      style="height:41px !important; width:174px !important;" />
 </a>
 
