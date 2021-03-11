@@ -5,7 +5,7 @@
 ## New in v1.1.1:
 - Ability to override the announcement prefix spoken by Alexa.
 
-## Door/Window Open Delay, and Close Announcement Control
+## Overview
 
 Alexa and other smart speakers (media_player) announce your doors/windows opening and closing. Comes in handy specially for garage doors or side/main exits for homes and shops where you need to stay informed of any changes. Trust me, it's a secured feeling to know the status of your garage, main/side exits.
 
